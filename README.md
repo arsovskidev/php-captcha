@@ -12,4 +12,30 @@
 
 ![](.screenshots/13.png)![](.screenshots/14.png)![](.screenshots/15.png)![](.screenshots/16.png)
 
+##### Usage  
+
+```
+<?php
+session_start();
+$status = "";
+
+if ($_SESSION['captcha'] === $_POST['captcha']) {
+    $status = "<p style='color: green;'>Captcha is correct!</p>";
+} else {
+    $status = "<p style='color: red;'>Captcha is invalid!</p>";
+}
+?>
+```
+
+```
+<form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <img src="generate.php" alt="CAPTCHA">
+    <div class="elem-group">
+        <label for="captcha">Enter the captcha:</label>
+        <br>
+        <input type="text" id="captcha" name="captcha">
+        <input type="submit" name="submit" value="Submit">
+    </div>
+</form>
+```
 ###### Feel free to use it for your project 🥰.
