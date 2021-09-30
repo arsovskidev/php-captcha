@@ -38,4 +38,4 @@ if ($_SESSION['captcha'] === $_POST['captcha']) {
     </div>
 </form>
 ```
-###### Feel free to use it for your project 🥰.
+###### Feel free to use it for your project.
